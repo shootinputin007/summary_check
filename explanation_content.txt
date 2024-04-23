@@ -1,0 +1,9 @@
+This transaction involves a swap of the ANDY ERC20 token for WETH on the MetaSwap platform. The key steps are: 
+
+- The user (0xbd1b84f69b92d4e31dfbdb7f6b77075a39b6ee6b) initiates a swap of 2,000,000 ANDY tokens for WETH. 
+- The MetaSwap contract calls the _swap function, which triggers a series of internal calls to transfer the ANDY tokens from the user to the MetaSwap contract, and then to swap them for WETH. 
+- The WETH tokens are then transferred from the MetaSwap contract to the user's address (0x74de5d4fcbf63e00296fd95d33236b9794016631). 
+- The user then withdraws the WETH tokens from the MetaSwap contract, receiving 0.079817768414824203 WETH. 
+- Finally, the user transfers a small amount of ETH (0.000698405473629712) to another address (0xf326e4de8f66a0bdc0970b79e0924e33c79f1915), and the remaining ETH (0.079119362941194491) back to the original user address (0xbd1b84f69b92d4e31dfbdb7f6b77075a39b6ee6b). 
+
+1. 2. 3. 4. 5. 6. 7. 100 20% 25682244
