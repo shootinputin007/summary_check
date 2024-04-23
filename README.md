@@ -11,7 +11,7 @@ This heuristic is still flawed and requires more testing and suggestions.
   
 ### Assumptions:
 * - asset_changes json object returned by Tenderly contains the accurate amounts of all asset changes 
-        * - After the fixes from dev branch, this should hold true
+        * After the fixes from dev branch, this should hold true
 * - These values are all expected to be present in an accurate summary
  
 ### Flow:
