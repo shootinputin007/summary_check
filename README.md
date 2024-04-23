@@ -27,7 +27,7 @@ This heuristic is still flawed and requires more testing and suggestions.
 ### Issues:
 * 1. Claude generates amounts in irregular ways
         * Sometimes, it rounds up the numbers, which can cause the heuristic to mistakenly conclude that there is a value from asset_changes missing
-* 2. Claude uses numerical bullet lists sometimes
+* 2. Claude sometimes uses numerical bullet lists
         * This is potentially a problem because when extracting numbers from the summary string it is difficult to filter out these bullet list numbers without filtering out other potentially useful numbers
         * The presence of bullet list numbers in the summary and, consequently, the list of summary values can cause problems during comparison
         * For example, when there is an amount of 0.1 ETH and the bullet list number 1., after removing extra characters and left trimming the '0' characters, the heuristic can conclude that there is a value with wrong decimals in the summary
