@@ -10,9 +10,9 @@ This heuristic is still flawed and requires more testing and suggestions.
 - Figuring out a way to automatically detect a flawed summary in order to automatically up the model and re-run Claude
   
 ### Assumptions:
-* - asset_changes json object returned by Tenderly contains the accurate amounts of all asset changes 
+* asset_changes json object returned by Tenderly contains the accurate amounts of all asset changes 
         * After the fixes from dev branch, this should hold true
-* - These values are all expected to be present in an accurate summary
+* These values are all expected to be present in an accurate summary
  
 ### Flow:
 * 1. Extract amount values from asset_changes and the summary
