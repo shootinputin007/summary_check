@@ -31,7 +31,7 @@ def explore_json(obj, amounts):
 def extract_amounts(json_obj):
     try:
         amounts = []
-        explore_json(json_obj, amounts)
+        explore_json(json_obj['asset_changes'], amounts)
         amounts = set(amounts)
         return amounts
     
