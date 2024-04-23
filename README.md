@@ -22,12 +22,12 @@ A heuristic like this is useful to automatically detect summaries in which amoun
 - These values are expected to be present in an accurate summary
 - 
 ### Flow:
-Extract amount values from asset_changes and the summary
-            |
-Check if all the values from asset_changes are present in the summary values
-    |                                              |
-    |                                           If not, up the model and restart
-If yes, check if there are values in summary
-that do not appear in asset_changes values
-    |
-If there are any, compare them to
+1. Extract amount values from asset_changes and the summary
+2. Check if all the values from asset_changes are present in the summary values
+3. If not, up the model and restart
+4. If yes, check if there are values in summary that do NOT appear in asset_changes values
+5. If there are none, the summary is fine
+6. If there are any, compare them to the values in asset_changes
+        6.1 Remove any extra characters (',','.', etc.) from both and left trim '0' characters from them
+        6.2 The idea is that if values cleaned like this match, it implies wrong decimals         
+7. If there are any matches, up the model and restart
